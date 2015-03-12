@@ -7,4 +7,3 @@ c:\users\goqadze\documents\visual studio 2013\Projects\unblockme\unblockme\obj\D
 c:\users\goqadze\documents\visual studio 2013\Projects\unblockme\unblockme\obj\Debug\unblockme.exe
 c:\users\goqadze\documents\visual studio 2013\Projects\unblockme\unblockme\obj\Debug\unblockme.pdb
 c:\users\goqadze\documents\visual studio 2013\Projects\unblockme\unblockme\obj\Debug\unblockme.unBlockMe.resources
-c:\users\goqadze\documents\visual studio 2013\Projects\unblockme\unblockme\obj\Debug\unblockme.AnswerForm.resources

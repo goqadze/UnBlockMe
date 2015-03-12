@@ -1,0 +1,10 @@
+c:\users\goqadze\documents\visual studio 2013\Projects\unblockme\unblockme\bin\Debug\unblockme.exe.config
+c:\users\goqadze\documents\visual studio 2013\Projects\unblockme\unblockme\bin\Debug\unblockme.exe
+c:\users\goqadze\documents\visual studio 2013\Projects\unblockme\unblockme\bin\Debug\unblockme.pdb
+c:\users\goqadze\documents\visual studio 2013\Projects\unblockme\unblockme\obj\Debug\unblockme.csprojResolveAssemblyReference.cache
+c:\users\goqadze\documents\visual studio 2013\Projects\unblockme\unblockme\obj\Debug\unblockme.Properties.Resources.resources
+c:\users\goqadze\documents\visual studio 2013\Projects\unblockme\unblockme\obj\Debug\unblockme.csproj.GenerateResource.Cache
+c:\users\goqadze\documents\visual studio 2013\Projects\unblockme\unblockme\obj\Debug\unblockme.exe
+c:\users\goqadze\documents\visual studio 2013\Projects\unblockme\unblockme\obj\Debug\unblockme.pdb
+c:\users\goqadze\documents\visual studio 2013\Projects\unblockme\unblockme\obj\Debug\unblockme.unBlockMe.resources
+c:\users\goqadze\documents\visual studio 2013\Projects\unblockme\unblockme\obj\Debug\unblockme.AnswerForm.resources

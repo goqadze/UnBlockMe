@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
 using System.Threading;
+using System.Runtime.InteropServices;
 
 namespace unblockme
 {
@@ -32,9 +33,9 @@ namespace unblockme
         int d;
         int w = 3;
         int red, redX = 0;
-        public int[, ,] answer;
-        public int ansSize;
-        public int index = -1;
+        int[, ,] answer;
+        int ansSize;
+        int index = -1;
 
         private void plankNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -117,22 +118,27 @@ namespace unblockme
             }
         }
 
+        [DllImport("PuzzleSolution.dll", CallingConvention = CallingConvention.Cdecl)]
+        static extern IntPtr solvePuzzle(int[] input);
+        [DllImport("PuzzleSolution.dll", CallingConvention = CallingConvention.Cdecl)]
+        static extern void Free_Obj(IntPtr obj);
+
+
         private void btnGoToSolve_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Sure?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) != System.Windows.Forms.DialogResult.OK)
                 return;
 
-            StreamWriter sw = new StreamWriter("input.txt");
+            int[] input = new int[N * N];
             red = 0;
             for (int i = 0; i < N; i++)
             {
                 for (int j = 0; j < N; j++)
                 {
-                    sw.Write(inputBoard[j, i] + " ");
+                    input[i * N + j] = inputBoard[j, i];
                     if (inputBoard[j, i] == red) redX = i;
                     red = Math.Max(red, inputBoard[j, i]);
                 }
-                sw.Write("\n");
             }
 
             for (int i = 0; i < N; i++)
@@ -149,36 +155,34 @@ namespace unblockme
                 }
             }
 
-            sw.Close();
-
             this.btnGoToSolve.Visible = false;
-            
-            Process.Start("Code.exe");
-            
+
+            IntPtr resPtr = solvePuzzle(input);
+            ansSize = Marshal.ReadInt32(resPtr);
+            int size = ansSize * N * N + 1;
+            int[] result = new int[size];
+            Marshal.Copy(resPtr, result, 0, size);
+            Free_Obj(resPtr);
+
             board.Image = bitMap;
-            
-            Thread.Sleep(5000);
-            
-            StreamReader sr = new StreamReader("output.txt");
-            ansSize = int.Parse(sr.ReadLine());
+           
             if (ansSize == 0)
             {
                 MessageBox.Show("Error", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
             answer = new int[ansSize, N, N];
             for (int i = 0; i < ansSize; i++)
             {
                 for (int j = 0; j < N; j++)
                 {
-                    string[] s = sr.ReadLine().Split();
                     for (int k = 0; k < N; k++)
                     {
-                        int num = int.Parse(s[k]);
+                        int num = result[(i * N * N) + j * N + k + 1];
                         answer[i, j, k] = num;
                     }
                 }
-                sr.ReadLine();
             }
 
             this.plankNumber.Text = string.Empty;
@@ -286,7 +290,5 @@ namespace unblockme
 
             base.OnKeyDown(e);
         }
-
-
     }
 }

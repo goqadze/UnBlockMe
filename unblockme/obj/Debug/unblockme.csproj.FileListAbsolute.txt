@@ -7,3 +7,12 @@ c:\users\goqadze\documents\visual studio 2013\Projects\unblockme\unblockme\obj\D
 c:\users\goqadze\documents\visual studio 2013\Projects\unblockme\unblockme\obj\Debug\unblockme.exe
 c:\users\goqadze\documents\visual studio 2013\Projects\unblockme\unblockme\obj\Debug\unblockme.pdb
 c:\users\goqadze\documents\visual studio 2013\Projects\unblockme\unblockme\obj\Debug\unblockme.unBlockMe.resources
+C:\Users\goqadze\Desktop\UnBlock me\UnBlockMe\unblockme\bin\Debug\unblockme.exe.config
+C:\Users\goqadze\Desktop\UnBlock me\UnBlockMe\unblockme\obj\Debug\unblockme.exe
+C:\Users\goqadze\Desktop\UnBlock me\UnBlockMe\unblockme\obj\Debug\unblockme.pdb
+C:\Users\goqadze\Desktop\UnBlock me\UnBlockMe\unblockme\bin\Debug\unblockme.exe
+C:\Users\goqadze\Desktop\UnBlock me\UnBlockMe\unblockme\bin\Debug\unblockme.pdb
+C:\Users\goqadze\Desktop\UnBlock me\UnBlockMe\unblockme\obj\Debug\unblockme.csprojResolveAssemblyReference.cache
+C:\Users\goqadze\Desktop\UnBlock me\UnBlockMe\unblockme\obj\Debug\unblockme.unBlockMe.resources
+C:\Users\goqadze\Desktop\UnBlock me\UnBlockMe\unblockme\obj\Debug\unblockme.Properties.Resources.resources
+C:\Users\goqadze\Desktop\UnBlock me\UnBlockMe\unblockme\obj\Debug\unblockme.csproj.GenerateResource.Cache

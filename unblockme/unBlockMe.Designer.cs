@@ -74,7 +74,7 @@
             this.btnGoToSolve.Name = "btnGoToSolve";
             this.btnGoToSolve.Size = new System.Drawing.Size(75, 23);
             this.btnGoToSolve.TabIndex = 3;
-            this.btnGoToSolve.Text = "go to solve";
+            this.btnGoToSolve.Text = "solve";
             this.btnGoToSolve.UseVisualStyleBackColor = true;
             this.btnGoToSolve.Visible = false;
             this.btnGoToSolve.Click += new System.EventHandler(this.btnGoToSolve_Click);

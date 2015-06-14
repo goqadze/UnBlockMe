@@ -156,7 +156,6 @@ namespace unblockme
             }
 
             this.btnGoToSolve.Visible = false;
-<<<<<<< HEAD
 
             IntPtr resPtr = solvePuzzle(input);
             ansSize = Marshal.ReadInt32(resPtr);
@@ -164,13 +163,7 @@ namespace unblockme
             int[] result = new int[size];
             Marshal.Copy(resPtr, result, 0, size);
             Free_Obj(resPtr);
-
-=======
             
-            // source -- main.cpp
-            Process.Start("Code.exe");
-            
->>>>>>> 380bbde9b2e69a0dd3a8e4c986070691b7b48c1f
             board.Image = bitMap;
            
             if (ansSize == 0)

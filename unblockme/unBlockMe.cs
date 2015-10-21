@@ -47,11 +47,11 @@ namespace unblockme
 
         private void unBlockMe_Load(object sender, EventArgs e)
         {
-            Reset();
+            reset();
             this.btnGoToSolve.Visible = false;
         }
 
-        private void Reset(bool msgBox = false)
+        private void reset(bool msgBox = false)
         {
             if (msgBox && MessageBox.Show("Sure?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) != System.Windows.Forms.DialogResult.OK)
                 return;
@@ -204,7 +204,7 @@ namespace unblockme
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            Reset(true);
+            reset(true);
         }
 
         private void goRight()
@@ -286,7 +286,7 @@ namespace unblockme
             else if (e.KeyCode == Keys.D)
                 goRight();
             else if (e.KeyCode == Keys.R)
-                Reset(true);
+                reset(true);
 
             base.OnKeyDown(e);
         }
